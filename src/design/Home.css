@@ -1,0 +1,7 @@
+.home {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-size: cover; /* Gör att bilden täcker hela elementet */
+  background-position: center; /* Centrera bilden i elementet */
+  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
+  height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+}
