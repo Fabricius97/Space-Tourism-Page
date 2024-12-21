@@ -1,0 +1,19 @@
+.destination {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-size: cover; /* Gör att bilden täcker hela elementet */
+  background-position: center; /* Centrera bilden i elementet */
+  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
+  height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+}
+
+@media (max-width: 768px) {
+  .destination {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (max-width: 425px) {
+  .destination {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}

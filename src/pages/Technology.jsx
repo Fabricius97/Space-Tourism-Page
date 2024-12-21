@@ -1,7 +1,8 @@
 import React from "react";
+import "../design/Technology.css";
 
 const Technology = () => {
-  return <div>Technology</div>;
+  return <div className="technology">Technology</div>;
 };
 
 export default Technology;

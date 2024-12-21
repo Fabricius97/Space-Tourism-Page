@@ -4,6 +4,51 @@
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
   height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero {
+  width: 100%;
+  max-height: 100vh;
+  padding: 200px 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.heroText {
+  max-width: 420px;
+}
+
+.heroText h3 {
+  font-weight: lighter;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.heroText h1 {
+  font-size: 144px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.heroText p {
+  font-size: 18px;
+  line-height: 180%;
+}
+
+.exploreButton {
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  border: none;
+  font-size: 28px;
+  font-family: "Bellefair", "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

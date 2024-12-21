@@ -20,7 +20,7 @@
   border-bottom-left-radius: 5px;
   z-index: 1000;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(35, 39, 63, 0.1);
   backdrop-filter: blur(10px);
   position: relative;
   letter-spacing: 2px;

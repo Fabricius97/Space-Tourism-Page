@@ -1,7 +1,8 @@
 import React from "react";
+import "../design/Crew.css";
 
 const Crew = () => {
-  return <div>Crew</div>;
+  return <div className="crew">Crew</div>;
 };
 
 export default Crew;
