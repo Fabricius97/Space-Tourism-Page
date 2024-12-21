@@ -5,3 +5,15 @@
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
   height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
 }
+
+@media (max-width: 768px) {
+  .home {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (max-width: 425px) {
+  .home {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+}
