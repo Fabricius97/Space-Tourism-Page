@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../design/Destination.css";
-import moon from "../assets/destination/image-moon.png";
+import data from "../data.json";
 
 const Destination = () => {
-  const planets = ["MOON", "MARS", "EUROPA", "TITAN"];
+  const destinations = data.destinations;
+
+  // State för vald destination (standard till första destinationen)
+  const [selectedDestination, setSelectedDestination] = useState(
+    destinations[0]
+  );
+
   return (
     <div className="destination">
       <div className="hero-destination">
@@ -12,25 +18,56 @@ const Destination = () => {
         </h1>
       </div>
       <div className="destination-info">
+        {/* Bild för vald destination */}
         <div className="img-destination">
-          <img src={moon} alt="moon" />
+          <img
+            src={selectedDestination.images.png}
+            alt={selectedDestination.name}
+          />
         </div>
+
+        {/* Information om vald destination */}
         <div className="description-destination">
+          {/* Knappar för att välja destination */}
           <div className="description-planets">
-            {planets.map((planet, i) => (
-              <button key={i}>{planet}</button>
+            {destinations.map((destination, i) => (
+              <button
+                key={i}
+                className={
+                  selectedDestination.name === destination.name ? "active" : ""
+                }
+                onClick={() => setSelectedDestination(destination)}
+              >
+                {destination.name}
+              </button>
             ))}
           </div>
+
+          {/* Namn på vald planet */}
           <div className="planets-name">
-            <h1>MOON</h1>
+            <h1>{selectedDestination.name}</h1>
           </div>
+
+          {/* Beskrivning av vald planet */}
           <div className="description-text">
-            <p>
-              See our planet as you’ve never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you’re there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites.
-            </p>
+            <p>{selectedDestination.description}</p>
+          </div>
+
+          {/* Horisontell linje */}
+          <div className="hr-line">
+            <hr />
+          </div>
+
+          {/* Distans och resetid */}
+          <div className="distanceAndTravelTime">
+            <div className="distance">
+              <p>AVG. DISTANCE</p>
+              <p>{selectedDestination.distance}</p>
+            </div>
+            <div className="travelTime">
+              <p>EST. TRAVEL TIME</p>
+              <p>{selectedDestination.travel}</p>
+            </div>
           </div>
         </div>
       </div>

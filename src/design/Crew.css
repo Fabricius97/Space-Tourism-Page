@@ -1,5 +1,5 @@
 .crew {
-  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-image: url("/public/assets/crew/background-crew-desktop.jpg");
   background-size: cover; /* Gör att bilden täcker hela elementet */
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
@@ -8,12 +8,12 @@
 
 @media (max-width: 768px) {
   .crew {
-    background-image: url("../assets/crew/background-crew-tablet.jpg");
+    background-image: url("/public/assets/crew/background-crew-tablet.jpg");
   }
 }
 
 @media (max-width: 425px) {
   .crew {
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    background-image: url("/public/assets/crew/background-crew-mobile.jpg");
   }
 }

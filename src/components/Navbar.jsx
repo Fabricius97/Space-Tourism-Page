@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/shared/logo.svg";
+import Logo from "/assets/shared/logo.svg";
 import "../design/Navbar.css";
-import HamburgerMenu from "../assets/shared/icon-hamburger.svg";
-import CloseHamburgerMenu from "../assets/shared/icon-close.svg";
+import HamburgerMenu from "/assets/shared/icon-hamburger.svg";
+import CloseHamburgerMenu from "/assets/shared/icon-close.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
