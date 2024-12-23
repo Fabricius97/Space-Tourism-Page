@@ -129,3 +129,16 @@
     padding-right: 64px;
   }
 }
+
+@media (max-width: 458px) {
+  .navbar {
+    top: 0;
+  }
+  .img-logo {
+    padding-left: 40px;
+  }
+
+  .overlay {
+    padding-right: 40px;
+  }
+}

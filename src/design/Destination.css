@@ -4,6 +4,15 @@
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
   height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.destination-info {
+  display: flex;
+  border: 1px solid white;
 }
 
 @media (max-width: 768px) {
