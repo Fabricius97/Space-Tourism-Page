@@ -1,5 +1,5 @@
 .technology {
-  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
   background-size: cover; /* Gör att bilden täcker hela elementet */
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
@@ -8,12 +8,12 @@
 
 @media (max-width: 768px) {
   .technology {
-    background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
   }
 }
 
 @media (max-width: 425px) {
   .technology {
-    background-image: url("../assets/technology/background-technology-mobile.jpg");
+    background-image: url("/assets/technology/background-technology-mobile.jpg");
   }
 }

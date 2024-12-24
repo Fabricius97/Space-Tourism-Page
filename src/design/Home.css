@@ -1,5 +1,5 @@
 .home {
-  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover; /* Gör att bilden täcker hela elementet */
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
@@ -89,12 +89,12 @@
 
 @media (max-width: 768px) {
   .home {
-    background-image: url("../assets/home/background-home-tablet.jpg");
+    background-image: url("/assets/home/background-home-tablet.jpg");
   }
 }
 
 @media (max-width: 425px) {
   .home {
-    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-image: url("/assets/home/background-home-mobile.jpg");
   }
 }

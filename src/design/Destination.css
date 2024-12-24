@@ -1,5 +1,5 @@
 .destination {
-  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
   background-size: cover; /* Gör att bilden täcker hela elementet */
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
@@ -10,19 +10,35 @@
   flex-direction: column;
 }
 
+.description-destination {
+  max-width: 445px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-destination {
+  width: 100%;
+}
+
 .destination-info {
   display: flex;
-  border: 1px solid white;
+  gap: 60px;
+}
+
+.distanceAndTravelTime {
+  display: flex;
 }
 
 @media (max-width: 768px) {
   .destination {
-    background-image: url("../assets/destination/background-destination-tablet.jpg");
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
   }
 }
 
 @media (max-width: 425px) {
   .destination {
-    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
   }
 }

@@ -37,22 +37,22 @@ const Navbar = () => {
 
           <li className="links">
             <Link to="/" className="nav-link" onClick={toggleMenu}>
-              00 <span style={{ opacity: "0.8" }}>HOME</span>
+              <span>00</span> HOME
             </Link>
           </li>
           <li>
             <Link to="/destination" className="nav-link" onClick={toggleMenu}>
-              01 <span style={{ opacity: "0.8" }}>DESTINATION</span>
+              <span>01</span> DESTINATION
             </Link>
           </li>
           <li>
             <Link to="/crew" className="nav-link" onClick={toggleMenu}>
-              02 <span style={{ opacity: "0.8" }}>CREW</span>
+              <span>02</span> CREW
             </Link>
           </li>
           <li>
             <Link to="/technology" className="nav-link" onClick={toggleMenu}>
-              03 <span style={{ opacity: "0.8" }}>TECHNOLOGY</span>
+              <span>03</span> TECHNOLOGY
             </Link>
           </li>
         </ul>
