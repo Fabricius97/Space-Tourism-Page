@@ -41,12 +41,12 @@ const Destination = () => {
 
           {/* Namn på vald planet */}
           <div className="planets-name">
-            <h1>{selectedDestination.name}</h1>
+            <span>{selectedDestination.name}</span>
           </div>
 
           {/* Beskrivning av vald planet */}
           <div className="description-text">
-            <p>{selectedDestination.description}</p>
+            <span>{selectedDestination.description}</span>
           </div>
 
           {/* Horisontell linje */}
@@ -57,12 +57,16 @@ const Destination = () => {
           {/* Distans och resetid */}
           <div className="distanceAndTravelTime">
             <div className="distance">
-              <p>AVG. DISTANCE</p>
-              <p>{selectedDestination.distance}</p>
+              <span className="distanceSpan">AVG. DISTANCE</span>
+              <span className="distanceData">
+                {selectedDestination.distance}
+              </span>
             </div>
             <div className="travelTime">
-              <p>EST. TRAVEL TIME</p>
-              <p>{selectedDestination.travel}</p>
+              <span className="travelTimeSpan">EST. TRAVEL TIME</span>
+              <span className="travelTimeData">
+                {selectedDestination.travel}
+              </span>
             </div>
           </div>
         </div>
