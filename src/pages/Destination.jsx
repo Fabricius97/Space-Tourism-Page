@@ -13,9 +13,7 @@ const Destination = () => {
   return (
     <div className="destination">
       <div className="hero-destination">
-        <h1>
-          <span>01</span> PICK YOUR DESTINATION
-        </h1>
+        <span>01</span> PICK YOUR DESTINATION
       </div>
       <div className="destination-info">
         {/* Bild för vald destination */}
@@ -33,9 +31,7 @@ const Destination = () => {
             {destinations.map((destination, i) => (
               <button
                 key={i}
-                className={
-                  selectedDestination.name === destination.name ? "active" : ""
-                }
+                className="planetButtons"
                 onClick={() => setSelectedDestination(destination)}
               >
                 {destination.name}
