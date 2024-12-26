@@ -14,6 +14,9 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Overlay */}
+      {isOpen && <div className="navbar-overlay" onClick={toggleMenu}></div>}
+
       <nav className="navbar">
         <img
           src={Logo}

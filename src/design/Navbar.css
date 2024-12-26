@@ -6,6 +6,7 @@
   position: fixed;
   width: 100%;
   top: 40px;
+  z-index: 1000;
 }
 
 .navbar-links {
@@ -27,6 +28,10 @@
   font-family: "Barlow Condensed";
 }
 
+.navbar-links.active {
+  z-index: 1000;
+}
+
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -41,21 +46,18 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -40px; /* Placera linjen under texten */
+  bottom: -40px;
   width: 100%;
-  height: 2px; /* Tjockleken på linjen */
+  height: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  transform: scaleX(0); /* Dölj linjen initialt */
+  transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease; /* Mjuk animation */
+  transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after {
-  transform: scaleX(1); /* Visa linjen vid hover */
-}
-
+.nav-link:hover::after,
 .nav-link:focus::after {
-  transform: scaleX(1); /* Visa linjen vid fokus */
+  transform: scaleX(1);
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -72,17 +74,35 @@
   display: none;
 }
 
+/* Overlay */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 50; /* Högre än allt under, lägre än navbar-links */
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    top: 0px;
+  }
+}
+
+/* Anpassningar för mobilen */
 @media (max-width: 768px) {
   .nav-link::after {
     content: "";
     position: absolute;
-    left: -10px; /* Justera avståndet från texten */
-    top: 0; /* Placera linjen vid toppen av texten */
-    width: 2px; /* Bredden på linjen (vertikal) */
-    height: 100%; /* Höjden på linjen */
-    transform: scaleY(0); /* Dölj linjen initialt */
-    transform-origin: top; /* Börja animationen från toppen */
-    transition: transform 0.3s ease; /* Mjuk animation */
+    left: -10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
   }
 
   .navbar {
@@ -92,14 +112,14 @@
   .navbar-links {
     display: none;
     position: absolute;
-    right: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    right: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     width: 50%;
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    z-index: 100;
   }
 
   .navbar-links.active {
@@ -110,6 +130,7 @@
     justify-content: flex-start;
     padding-top: 74px;
     margin: 0;
+    z-index: 1000;
   }
 
   .links {
@@ -123,8 +144,13 @@
   .closeHamburgerMenu {
     display: flex;
     position: absolute;
-    right: 0px;
+    right: 0;
     padding-right: 64px;
+  }
+
+  /* Overlay */
+  .navbar-overlay {
+    display: block;
   }
 }
 
@@ -132,6 +158,7 @@
   .navbar {
     top: 0;
   }
+
   .img-logo {
     padding-left: 40px;
   }
