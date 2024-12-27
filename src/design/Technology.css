@@ -4,11 +4,178 @@
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
   height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 64px;
+  gap: 30px;
+}
+
+.technology-hero {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+.technology-hero span {
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.technology-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+}
+
+.technology-infoContainer {
+  display: flex;
+  max-width: 635px;
+  gap: 64px;
+}
+
+.technology-buttons {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.technology-button {
+  all: unset;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  font-family: "Bellefair";
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology-button:hover {
+  border: 1px solid rgb(255, 255, 255, 1);
+}
+
+.technology-button.active {
+  background-color: white;
+  color: #0b0d17;
+}
+
+.technology-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoHero {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+.technology-name {
+  font-size: 56px;
+  text-transform: uppercase;
+}
+
+.technology-description {
+  font-size: 18px;
+  color: #d0d6f9;
+  font-family: "Barlow";
+  line-height: 180%;
+}
+
+@media (max-width: 1245px) {
+  .technology {
+    align-items: center;
+    padding: 0 64px;
+    justify-content: space-around;
+  }
+
+  .technology-hero {
+    font-size: 20px;
+    padding-top: 100px;
+  }
+
+  .technology-container {
+    flex-direction: column;
+  }
+  .technology-imgContainer {
+    order: -1;
+    width: 100%; /* Tar upp hela bredden på containern */
+    overflow: hidden;
+  }
+
+  .technology-infoContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  .technology-buttons {
+    flex-direction: row;
+  }
+
+  .technology-button {
+    width: 56px;
+    height: 56px;
+  }
+  .technology-info {
+    gap: 16px;
+  }
+
+  .infoHero {
+    font-size: 24px;
+  }
+  .technology-name {
+    font-size: 40px;
+  }
+  .technology-description {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .technology {
     background-image: url("/assets/technology/background-technology-tablet.jpg");
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .technology-hero {
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .infoHero {
+    font-size: 18px;
+  }
+  .technology-name {
+    font-size: 24px;
+  }
+  .technology-description {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+
+  .technology-buttons {
+    gap: 16px;
+  }
+  .technology-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .technology-imgContainer img {
+    width: 101%; /* Bilden tar upp hela bredden */
   }
 }
 

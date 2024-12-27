@@ -24,7 +24,9 @@ const Crew = () => {
               {crewMembers.map((crewMember, i) => (
                 <button
                   key={i}
-                  className="crewToggleButton"
+                  className={`crewToggleButton ${
+                    selectedCrewMember.name === crewMember.name ? "active" : ""
+                  }`}
                   onClick={() => setSelectedCrewMember(crewMember)}
                 >
                   {crewMember.name}

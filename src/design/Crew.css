@@ -5,24 +5,184 @@
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
   height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   padding: 0 64px;
   flex-direction: column;
+  align-items: center;
+}
+
+.crew-hero {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  letter-spacing: 4px;
+  font-weight: 300;
+  padding-top: 150px;
+}
+
+.crew-hero span {
+  opacity: 0.5;
+  font-weight: 600;
 }
 
 .crew-container {
   display: flex;
+  width: 1110px;
 }
 
-@media (max-width: 768px) {
+.crew-infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.crew-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 539px;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.crew-role {
+  font-size: 32px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.crew-name {
+  font-size: 56px;
+  text-transform: uppercase;
+}
+
+.crew-bio {
+  font-family: "Barlow";
+  font-size: 18px;
+  line-height: 180%;
+  color: #d0d6f9;
+}
+
+.crewToggleButton {
+  all: unset;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 17.44%);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  text-indent: -9999px; /* Skickar texten utanför synfältet */
+  overflow: hidden; /* Förhindrar att texten dyker upp */
+  white-space: nowrap; /* Förhindrar textbrytning */
+}
+
+.crewToggleButton:hover {
+  background-color: white;
+}
+
+.crewToggleButton.active {
+  background-color: white; /* Helvit när den är aktiv */
+}
+
+.crew-toggle {
+  min-height: 63px;
+  gap: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.crew-img {
+  position: relative;
+  max-width: 539px;
+  max-height: 676px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1245px) {
   .crew {
-    background-image: url("/assets/crew/background-crew-tablet.jpg");
+    justify-content: space-between;
+  }
+
+  .crew-container {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+  }
+  .crew-hero {
+    font-size: 20px;
+  }
+
+  .crew-info {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .crew-toggle {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .crew-role {
+    font-size: 24px;
+  }
+  .crew-name {
+    font-size: 40px;
+  }
+  .crew-bio {
+    font-size: 16px;
+  }
+  .crewToggleButton {
+    width: 10px;
+    height: 10px;
+  }
+  .crew-img img {
+    width: 276px;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
+  .crew-hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 769px) {
+  .crew {
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
+  }
+  .crew-hero {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 566px) {
+  .crew {
+    justify-content: center;
+  }
+  .crew-role {
+    font-size: 18px;
+  }
+  .crew-name {
+    font-size: 24px;
+  }
+  .crew-bio {
+    font-size: 15px;
+  }
+  .crew-hero {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 459px) {
   .crew {
     background-image: url("/assets/crew/background-crew-mobile.jpg");
+    padding: 0 40px;
   }
 }

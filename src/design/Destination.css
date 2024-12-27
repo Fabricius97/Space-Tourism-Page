@@ -21,15 +21,18 @@
 }
 
 .hero-destination {
+  display: flex;
   width: 100%;
+  gap: 24px;
   font-family: "Barlow Condensed";
-  font-size: 32px;
-  letter-spacing: 2px;
+  font-size: 28px;
+  letter-spacing: 4px;
+  font-weight: 300;
 }
 
 .hero-destination span {
   opacity: 0.5;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .destination-info {
@@ -180,6 +183,12 @@
 @media (max-width: 768px) {
   .destination {
     background-image: url("/assets/destination/background-destination-tablet.jpg");
+    text-align: center;
+  }
+  .hero-destination {
+    font-size: 16px;
+    letter-spacing: 3px;
+    justify-content: center;
   }
 }
 
@@ -188,7 +197,6 @@
     padding: 0 40px;
     background-image: url("/assets/destination/background-destination-mobile.jpg");
     justify-content: flex-end;
-    text-align: center;
   }
   .destination-info {
     padding-bottom: 40px;

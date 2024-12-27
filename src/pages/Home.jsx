@@ -17,9 +17,9 @@ const Home = () => {
           </p>
         </div>
         <div className="explore">
-          <button className="exploreButton">
-            <Link to="/destination">EXPLORE</Link>
-          </button>
+          <Link to="/destination">
+            <button className="exploreButton">EXPLORE</button>
+          </Link>
         </div>
       </div>
     </div>
