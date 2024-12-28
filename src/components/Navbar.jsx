@@ -56,6 +56,7 @@ const Navbar = () => {
         </ul>
         <img
           src={HamburgerMenu}
+          alt="HamburgerMenu"
           className={`overlay ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
         />
