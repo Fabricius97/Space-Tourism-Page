@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/assets/shared/logo.svg";
 import "../design/Navbar.css";
 import HamburgerMenu from "/assets/shared/icon-hamburger.svg";
 import CloseHamburgerMenu from "/assets/shared/icon-close.svg";
+import data from "../data.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,58 +13,51 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Stäng menyn automatiskt om skärmen är större än en viss bredd
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Rensa eventlyssnaren när komponenten unmountas
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {/* Overlay */}
       {isOpen && <div className="navbar-overlay" onClick={toggleMenu}></div>}
 
       <nav className="navbar">
-        <img
-          src={Logo}
-          width={48}
-          height={48}
-          alt="logo"
-          className="img-logo"
-        />
+        <img src={Logo} alt="logo" className="img-logo" />
 
         <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
           <div className={`closeHamburgerMenu ${isOpen ? "active" : ""}`}>
             <img
               src={CloseHamburgerMenu}
-              width={24}
-              height={24}
               alt="closehamburgermenu"
               onClick={toggleMenu}
-              style={{ cursor: "pointer" }}
             />
           </div>
 
-          <li className="links">
-            <Link to="/" className="nav-link" onClick={toggleMenu}>
-              <span>00</span> HOME
-            </Link>
-          </li>
-          <li>
-            <Link to="/destination" className="nav-link" onClick={toggleMenu}>
-              <span>01</span> DESTINATION
-            </Link>
-          </li>
-          <li>
-            <Link to="/crew" className="nav-link" onClick={toggleMenu}>
-              <span>02</span> CREW
-            </Link>
-          </li>
-          <li>
-            <Link to="/technology" className="nav-link" onClick={toggleMenu}>
-              <span>03</span> TECHNOLOGY
-            </Link>
-          </li>
+          {data.links.map((link) => (
+            <li key={link.label} className="links">
+              <Link to={link.path} className="nav-link" onClick={toggleMenu}>
+                <span>{link.index}</span> {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
         <img
           src={HamburgerMenu}
           className={`overlay ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
-          style={{ cursor: "pointer" }}
         />
       </nav>
     </>

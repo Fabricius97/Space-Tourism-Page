@@ -72,6 +72,9 @@
 
 .closeHamburgerMenu {
   display: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 
 /* Overlay */
@@ -128,24 +131,22 @@
     top: 0;
     position: fixed;
     justify-content: flex-start;
-    padding-top: 74px;
+    padding-top: 100px;
     margin: 0;
     z-index: 1000;
   }
 
-  .links {
-    margin-top: 100px;
-  }
-
   .overlay {
     display: flex;
+    cursor: pointer;
   }
 
   .closeHamburgerMenu {
     display: flex;
     position: absolute;
     right: 0;
-    padding-right: 64px;
+    top: 0;
+    padding: 40px 64px 0 0;
   }
 
   /* Overlay */
@@ -157,6 +158,9 @@
 @media (max-width: 458px) {
   .navbar {
     top: 0;
+  }
+  .closeHamburgerMenu {
+    padding-right: 40px;
   }
 
   .img-logo {
