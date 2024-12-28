@@ -3,7 +3,7 @@
   background-size: cover; /* Gör att bilden täcker hela elementet */
   background-position: center; /* Centrera bilden i elementet */
   background-repeat: no-repeat; /* Förhindra att bilden upprepas */
-  height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+  min-height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
   display: flex;
   justify-content: flex-start;
   padding: 0 64px;
@@ -101,6 +101,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.crew-img img {
+  width: 450px;
 }
 
 @media (max-width: 1245px) {
