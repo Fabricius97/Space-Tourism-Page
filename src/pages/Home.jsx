@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../design/Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  useEffect(() => {
+    // Sätt body-klassen till "home" när komponenten mountas
+    document.body.className = "home";
+    return () => {
+      // Rensa klassen när komponenten unmountas
+      document.body.className = "";
+    };
+  }, []);
   return (
-    <div className="home">
+    <div className="homePage">
       <div className="hero">
         <div className="heroText">
           <h3>SO, YOU WANT TO TRAVEL TO</h3>

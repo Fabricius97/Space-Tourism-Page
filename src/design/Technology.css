@@ -1,15 +1,10 @@
-.technology {
-  background-image: url("/assets/technology/background-technology-desktop.jpg");
-  background-size: cover; /* Gör att bilden täcker hela elementet */
-  background-position: center; /* Centrera bilden i elementet */
-  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
-  height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+.technologyPage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 64px;
-  gap: 30px;
+  gap: 80px;
+  padding: 20px 64px 64px 64px;
 }
 
 .technology-hero {
@@ -29,15 +24,20 @@
 
 .technology-container {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 32px;
+  justify-content: space-between;
+  max-width: 1127px;
+  width: 100%;
+  gap: 64px;
 }
 
 .technology-infoContainer {
   display: flex;
   max-width: 635px;
   gap: 64px;
+}
+
+.technology-imgContainer img {
+  width: 460px;
 }
 
 .technology-buttons {
@@ -94,25 +94,26 @@
   line-height: 180%;
 }
 
-@media (max-width: 1245px) {
-  .technology {
-    align-items: center;
-    padding: 0 64px;
-    justify-content: space-around;
+@media (max-width: 1024px) {
+  .technologyPage {
+    gap: 20px;
   }
 
   .technology-hero {
     font-size: 20px;
-    padding-top: 100px;
   }
 
   .technology-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .technology-imgContainer {
     order: -1;
     width: 100%; /* Tar upp hela bredden på containern */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
 
   .technology-infoContainer {
@@ -142,13 +143,14 @@
   .technology-description {
     font-size: 16px;
   }
+  .technology-imgContainer img {
+    width: 101%; /* Bilden tar upp hela bredden */
+  }
 }
 
 @media (max-width: 768px) {
-  .technology {
-    background-image: url("/assets/technology/background-technology-tablet.jpg");
-    justify-content: flex-start;
-    padding: 0;
+  .technologyPage {
+    padding: 20px 0 64px 0;
   }
   .technology-hero {
     font-size: 16px;
@@ -174,14 +176,5 @@
     width: 40px;
     height: 40px;
     font-size: 16px;
-  }
-  .technology-imgContainer img {
-    width: 101%; /* Bilden tar upp hela bredden */
-  }
-}
-
-@media (max-width: 425px) {
-  .technology {
-    background-image: url("/assets/technology/background-technology-mobile.jpg");
   }
 }

@@ -3,10 +3,8 @@
   justify-content: space-between;
   align-items: center;
   height: 96px;
-  position: fixed;
-  width: 100%;
-  top: 40px;
   z-index: 1000;
+  padding-top: 30px;
 }
 
 .navbar-links {
@@ -90,7 +88,7 @@
 
 @media (max-width: 1024px) {
   .navbar {
-    top: 0px;
+    padding-top: 0;
   }
 }
 
@@ -156,9 +154,6 @@
 }
 
 @media (max-width: 458px) {
-  .navbar {
-    top: 0;
-  }
   .closeHamburgerMenu {
     padding-right: 40px;
   }

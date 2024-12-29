@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../design/Technology.css";
 import data from "../data.json";
 
@@ -7,8 +7,16 @@ const Technology = () => {
 
   const [selectedTechnology, setSelectedTechnology] = useState(technology[0]);
 
+  useEffect(() => {
+    // Sätt body-klassen till "home" när komponenten mountas
+    document.body.className = "technology";
+    return () => {
+      // Rensa klassen när komponenten unmountas
+      document.body.className = "";
+    };
+  }, []);
   return (
-    <div className="technology">
+    <div className="technologyPage">
       <div className="technology-hero">
         <span>03</span> SPACE LAUNCH 101
       </div>
@@ -39,7 +47,7 @@ const Technology = () => {
           <picture>
             <source
               srcSet={selectedTechnology.images.landscape}
-              media="(max-width: 1245px)" /* Landscape används för mindre skärmar */
+              media="(max-width: 1024px)" /* Landscape används för mindre skärmar */
             />
             <img
               src={selectedTechnology.images.portrait}

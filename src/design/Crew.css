@@ -1,14 +1,10 @@
-.crew {
-  background-image: url("/assets/crew/background-crew-desktop.jpg");
-  background-size: cover; /* Gör att bilden täcker hela elementet */
-  background-position: center; /* Centrera bilden i elementet */
-  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
-  min-height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+.crewPage {
   display: flex;
-  justify-content: flex-start;
-  padding: 0 64px;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  padding: 20px 64px 64px 64px;
 }
 
 .crew-hero {
@@ -19,7 +15,6 @@
   font-size: 28px;
   letter-spacing: 4px;
   font-weight: 300;
-  padding-top: 150px;
 }
 
 .crew-hero span {
@@ -29,7 +24,8 @@
 
 .crew-container {
   display: flex;
-  width: 1110px;
+  justify-content: center;
+  max-width: 1110px;
 }
 
 .crew-infoContainer {
@@ -104,22 +100,17 @@
 }
 
 .crew-img img {
-  width: 450px;
+  width: 400px;
 }
 
-@media (max-width: 1245px) {
-  .crew {
-    justify-content: space-between;
-  }
-
+@media (max-width: 1024px) {
   .crew-container {
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    width: auto;
   }
   .crew-hero {
     font-size: 20px;
+    padding: 0;
   }
 
   .crew-info {
@@ -150,17 +141,7 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .crew-hero {
-    padding-top: 100px;
-    padding-bottom: 40px;
-  }
-}
-
 @media (max-width: 769px) {
-  .crew {
-    background-image: url("/assets/crew/background-crew-tablet.jpg");
-  }
   .crew-hero {
     justify-content: center;
   }
@@ -185,8 +166,7 @@
 }
 
 @media (max-width: 459px) {
-  .crew {
-    background-image: url("/assets/crew/background-crew-mobile.jpg");
-    padding: 0 40px;
+  .crewPage {
+    padding: 20px 40px 20px 40px;
   }
 }

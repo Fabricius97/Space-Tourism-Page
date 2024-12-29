@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../design/Crew.css";
 import data from "../data.json";
 
@@ -7,8 +7,16 @@ const Crew = () => {
 
   const [selectedCrewMember, setSelectedCrewMember] = useState(crewMembers[0]);
 
+  useEffect(() => {
+    // Sätt body-klassen till "home" när komponenten mountas
+    document.body.className = "crew";
+    return () => {
+      // Rensa klassen när komponenten unmountas
+      document.body.className = "";
+    };
+  }, []);
   return (
-    <div className="crew">
+    <div className="crewPage">
       <div className="crew-hero">
         <span>02</span> MEET YOUR CREW
       </div>

@@ -1,15 +1,10 @@
-.destination {
-  background-image: url("/assets/destination/background-destination-desktop.jpg");
-  background-size: cover; /* Gör att bilden täcker hela elementet */
-  background-position: center; /* Centrera bilden i elementet */
-  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
-  height: 100vh; /* Sätt höjden på elementet (t.ex. 100% av vyhöjden) */
+.destinationPage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 80px;
-  padding: 0 64px;
+  padding: 20px 64px 64px 64px;
 }
 
 .description-destination {
@@ -37,7 +32,9 @@
 
 .destination-info {
   display: flex;
-  gap: 100px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .description-planets {
@@ -143,9 +140,9 @@
 }
 
 @media (max-width: 1024px) {
-  .destination {
+  .destinationPage {
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .hero-destination {
     font-size: 20px;
@@ -183,7 +180,6 @@
 
 @media (max-width: 768px) {
   .destination {
-    background-image: url("/assets/destination/background-destination-tablet.jpg");
     text-align: center;
   }
   .hero-destination {
@@ -194,12 +190,10 @@
 }
 
 @media (max-width: 458px) {
-  .destination {
-    padding: 0 40px;
-    background-image: url("/assets/destination/background-destination-mobile.jpg");
-    justify-content: flex-end;
+  .destinationPage {
+    padding: 20px 40px 20px 40px;
   }
-  .destination-info {
-    padding-bottom: 40px;
+  .hero-destination {
+    gap: 4px;
   }
 }

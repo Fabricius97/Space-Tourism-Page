@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../design/Destination.css";
 import data from "../data.json";
 
@@ -10,8 +10,16 @@ const Destination = () => {
     destinations[0]
   );
 
+  useEffect(() => {
+    // Sätt body-klassen till "home" när komponenten mountas
+    document.body.className = "destination";
+    return () => {
+      // Rensa klassen när komponenten unmountas
+      document.body.className = "";
+    };
+  }, []);
   return (
-    <div className="destination">
+    <div className="destinationPage">
       <div className="hero-destination">
         <span>01</span> PICK YOUR DESTINATION
       </div>
